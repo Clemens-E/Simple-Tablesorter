@@ -9,8 +9,9 @@ table {
 
 td,
 th {
-	border: 1px solid #CCC;
+	border: 1px solid transparent;
 	height: 30px;
+	transition: all 0.3s;
 }
 
 th {
@@ -28,4 +29,9 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
 	background: #FFF;
+}
+
+tr td:hover {
+	background: #666;
+	color: #FFF;
 }
