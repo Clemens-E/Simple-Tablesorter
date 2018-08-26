@@ -38,7 +38,7 @@ function renderrow(index, tablerow) {
   tablerow.appendChild(borntd);
 
   const gendertd = document.createElement("TD");
-  gendertd.appendChild(document.createTextNode((per.gender === "m") ? `Male` : `Female`));
+  gendertd.appendChild(document.createTextNode((per.gender === "m") ? `Male` : `${(per.gender === "f") ? `Female` : `Unknown`}`));
   tablerow.appendChild(gendertd);
   return tablerow;
 

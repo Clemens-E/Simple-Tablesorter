@@ -15,7 +15,7 @@ th {
 }
 
 th {
-	background: #ff4d4d;
+	background: #7FFFD4;
 	font-weight: bold;
 }
 
@@ -24,11 +24,11 @@ td {
 }
 
 tr:nth-child(even) {
-	background: #ffff99;
+	background: #00CED1;
 }
 
 tr:nth-child(odd) {
-	background: #FFF;
+	background: #008080;
 }
 
 tr td:hover {
