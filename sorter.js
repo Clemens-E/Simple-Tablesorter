@@ -7,8 +7,16 @@ const jsonpersons = `[{"fname":"Anthony", "lname":"Duncan","born":799624800000, 
 {"fname":"Ruby", "lname":"Field","born":615765600000, "gender": "f"}]`;
 let persons = JSON.parse(jsonpersons);
 let infos = [true, true, true, true];
-const bigger = field => (a, b) => a[field] > b[field];
-const smaller = field => (a, b) => a[field] < b[field];
+const bigger = field => (a, b) => {
+    if (a[field] > b[field])
+        return 1;
+    return -1;
+}
+const smaller = field => (a, b) => {
+    if (a[field] > b[field])
+        return -1;
+    return 1;
+}
 const field = {
     0: 'fname',
     1: 'lname',
@@ -55,6 +63,6 @@ document.getElementById("mainhead").addEventListener("click", (e) => {
     const index = e.target.cellIndex;
     const func = infos[index] ? bigger(field[index]) : smaller(field[index]);
     infos[index] = !infos[index];
-    persons = persons.sort(func);
+    persons.sort(func);
     rendertable();
 })
